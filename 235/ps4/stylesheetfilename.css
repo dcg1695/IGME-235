@@ -1,0 +1,15 @@
+h1 { 
+    color: darkred;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 1px solid goldenrod;
+    }
+blockquote { 
+    background-color: lightgray;
+    padding: 0.5rem;
+    }
+header {
+    display: block;
+    }
+footer {
+    display: block;
+    }
