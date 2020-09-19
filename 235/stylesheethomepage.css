@@ -1,0 +1,45 @@
+h1 { 
+    color: #EEEBE0;
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+    }
+blockquote { 
+    background-color: #BAFFC5;
+    padding: 1rem;
+    }
+body { 
+    background-color: #FF2554;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    }
+h2 { 
+    color: #EEEBE0;
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+    }
+.pics { 
+    display: flex;
+    justify-content: space-between;
+    }
+#works { 
+    background-color: #BAFFC5;
+    padding: 0.25rem;
+    }
+#works a {
+    color: #027B44;
+    }
+#links { 
+    background-color: #BAFFC5;
+    padding: 0.25rem;
+    }
+#links a {
+    color: #872130;
+    }
+main {
+    background-color: #AA00FF; 
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 80vw;
+    }
