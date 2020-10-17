@@ -1,0 +1,45 @@
+/* Do everything in this file */
+h2, h3 {
+    border-bottom: 1px solid red;
+    clear: none;
+}
+figure {
+    max-width: 650px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+figure img {
+    width: 100%;
+}
+div {
+    float: none;
+    text-align: center;
+}
+.tet {
+    flex: 0 1 450px;
+    border: 1px solid black;
+}
+.aliases {
+    text-align: left;
+    margin: 1em;
+}
+div img {
+    width: 60%;
+}
+header, main, footer {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+section {
+    display: flex;
+    flex-flow: row wrap;
+}
+span {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: large;
+    font-weight: bold;
+}

@@ -1,0 +1,183 @@
+body {
+    background-color: #35363d;
+    color: white;
+    font-family: 'Dogica Pixel';
+    margin: 0 auto;
+    padding: 0rem;
+    }
+main {
+    background-color: #35363D;
+    }
+p {
+    font-size: 11pt;
+    }
+#plankinfo p, #stickinfo p, #chestinfo p, #stairsinfo p {
+    font-size: 15pt;
+    }
+/* SECTION 1: HEADER */
+h1 {
+    font: 'Retro Computer';
+    font-size: 20pt;
+    display: flex;
+    padding-left: 10rem;
+    }
+.head {
+    background-color: #686868;
+    border: 1px solid black;
+    }
+#name {
+    font-size: 10pt;
+    }
+.tab {
+    padding-left: 45rem;
+    }
+/* SECTION 2: TREE INFO w/ IMAGE ON GRADIENT BCKGRND */
+h2 {
+    font: 'Retro Computer';
+    font-size: 18pt;
+    }
+.tree {
+    display: flex;
+    justify-content: space-evenly;
+    transform: scale(90%);
+    }
+#treeinfo {
+    border: 0px dotted white;
+    background-color: #686868;
+    padding: 2rem;
+    width: 30vw;
+    }
+#oak img {
+    border: 7px solid white;
+    transform: scaleY(107%) translateY(15px);;
+    padding: 2rem;
+    width: 30vw;
+    background-image: linear-gradient(to bottom right, #EDF8F5, #244D3E);
+    }
+/* SECTION 3: VALLEY PIC */
+#valley img {
+    width: 100%;
+    }
+/* SECTION 4: OTHER MATERIALS INFO w/ IMAGES */
+.material {
+    display: grid;
+    grid-template-areas: "image1    text1    image2    text2"
+                         "image3    text3    image4    text4";
+    
+    grid-template-columns: 275px 300px 300px 300px;
+    grid-template-rows: 300px 300px;
+    justify-content: space-evenly;
+    transform: translateX(-50px) translateY(-65px);
+    }
+h4 {
+    font-size: 20pt;
+    }
+#plank {
+    grid-area: image1;
+    text-align: center;
+    border: 7px solid white;
+    transform: scale(60%);
+    padding: 2rem;
+    width: 350px;
+    height: 350px;
+    background-color: #244D3E;
+    }
+#plank img {
+    transform: scale(70%) translateY(-40px);
+    }
+#plankinfo {
+    grid-area: text1;
+    border: 0px dotted white;
+    transform: scale(60%) scaleY(93%) scaleX(95%) translateY(-30px);
+    background-color: #686868;
+    padding: 2rem;
+    width: 400px;
+    height: 400px;
+    }
+#stick {
+    grid-area: image2;
+    text-align: center;
+    border: 7px solid white;
+    transform: scale(60%);
+    padding: 2rem;
+    width: 350px;
+    height: 350px;
+    background-color: #244D3E;
+    }
+#stick img {
+    transform: translateY(30px);
+    }
+#stickinfo {
+    grid-area: text2;
+    border: 0px dotted white;
+    transform: scale(60%) scaleY(105%) scaleX(105%) translateY(10px);
+    background-color: #686868;
+    padding: 2rem;
+    width: 350px;
+    height: 350px;
+    }
+#chest {
+    grid-area: image3;
+    text-align: center;
+    border: 7px solid white;
+    transform: scale(60%);
+    padding: 2rem;
+    width: 350px;
+    height: 350px;
+    background-color: #244D3E;
+    }
+#chest img {
+    transform: translateY(-30px);
+    }
+#chestinfo {
+    grid-area: text3;
+    border: 0px dotted white;
+    transform: scale(60%) scaleY(103%) scaleX(105%) translateY(8px) translateX(40px);
+    background-color: #686868;
+    padding: 2rem;
+    width: 350px;
+    height: 350px;
+    }
+#stairs {
+    grid-area: image4;
+    text-align: center;
+    border: 7px solid white;
+    transform: scale(60%);
+    padding: 2rem;
+    width: 350px;
+    height: 350px;
+    background-color: #244D3E;
+    }
+#stairs img {
+    transform: translateY(-10px);
+    }
+#stairsinfo {
+    grid-area: text4;
+    border: 0px dotted white;
+    transform: scale(60%) scaleY(103%) scaleX(105%) translateY(8px);
+    background-color: #686868;
+    padding: 2rem;
+    width: 350px;
+    height: 350px;
+    }
+/* SECTION 5: FOOTER */
+h3 {
+    font: 'Retro Computer';
+    font-size: 16pt;
+    display: flex;
+    padding-left: 8rem;
+    line-height: 35px;
+    transform: translateY(30%);
+    }
+.end {
+    background: url(Assets/trees.jpg);
+    background-size: 1525px 925px;
+    background-position: 50% 44%;
+    border-top: 5px solid white;
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    }
+.space {
+    padding-left: 20rem;
+    }

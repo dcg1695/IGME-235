@@ -1,0 +1,19 @@
+/* Do everything in this file */
+h2, h3 {
+    border-bottom: 1px solid red;
+    clear: both;
+}
+figure img {
+    float: right;
+    width: 40%;
+}
+div {
+    float: left;
+    width: 45%;
+    border: 1px solid black;
+}
+footer {
+    clear: none;
+    position: relative;
+    z-index: -1;
+}
