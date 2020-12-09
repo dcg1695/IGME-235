@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps Lab 3</title>
+	<style>
+		body{border:1px solid gray;}
+	</style>
+</head>
+<body>
+<h1>My Favorites</h1>
+<h2>My Favorite Colors</h2>
+
+<ol id="colorsList">
+	
+</ol>
+
+<h2>My Favorite Foods</h2>
+
+<ol id="foodsList">
+	
+</ol>
+
+<h2>My Favorite Links</h2>
+
+<ol id="linksList">
+	
+</ol>
+
+<script>
+"use strict";
+let colors = ["red","green","blue","purple","pink"];
+let foods = []; // add some foods
+colors.push("black");
+colors.push("cyan");
+foods.push("pizza");
+foods.push("omelettes");
+foods.push("french fries");
+foods.push("cookies");
+foods.push("pie");
+foods.push("sandwiches");
+
+let shades = document.querySelector("#colorsList");
+for (let c = 0; c < colors.length; c++)
+{
+	let item = document.createElement('li');
+	item.innerHTML = colors[c];
+	shades.appendChild(item);
+}
+
+let meals = document.querySelector("#foodsList");
+for (let food of foods)
+{
+	let item = document.createElement('li');
+	item.innerHTML = food;
+	meals.appendChild(item);
+}
+
+// Optional - can you figure out how to pull both the key AND the value
+// from the `links` object literal?
+let links = {
+		"RIT" : "http://www.rit.edu",
+		"RWAG" : "https://www.facebook.com/RWAGclub",
+		"New Media Club" : "http://newmediaclub.cias.rit.edu",
+		"Youtube" : "http://www.youtube.com",
+		"Twitch" : "https://www.twitch.tv/"
+	}
+let sites = document.querySelector("#linksList");
+for (let link of Object.keys(links))
+{
+	let item = document.createElement('li');
+	item.innerHTML = link.link(links[link]);
+	sites.appendChild(item);
+}
+
+</script>
+</body>
+</html>
