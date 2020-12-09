@@ -1,5 +1,5 @@
 h1 { 
-    color: #EEEBE0;
+    color: #EEE;
     font-family: 'Dosis', sans-serif;
     display: flex;
     justify-content: center;
@@ -29,15 +29,8 @@ h2 {
 #works a {
     color: #027B44;
     }
-#links { 
-    background-color: #BAFFC5;
-    padding: 0.25rem;
-    }
-#links a {
-    color: #872130;
-    }
 main {
-    background-color: #AA00FF; 
+    background-color: #CC66FF; 
     border: 1px solid black;
     padding: 1rem;
     margin: 0 auto;
