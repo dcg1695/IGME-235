@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danganronpa Phrases</title>
+    <link href="phrases-stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <!--title-->
+            <h1>Danganronpa Phrases</h1>
+        </header>
+        <section id="button">
+            <!--button to show new phrase-->
+            <button class="press">Click here for a cool quote. Puhuhuhu...</button>
+        </section>
+        <section id="phrase">
+            <!--quote from Danganronpa-->
+            Good nom-nom-nomming!
+        </section>
+        <footer>
+            <!--copyright-->
+            Copyright &copy; 
+        </footer>
+    </div>
+
+    <script>
+        // Update the copyight footer to display name + current year
+        let footer = document.querySelector("footer");
+        footer.innerHTML += new Date().getFullYear() + " David Green";
+    
+        // Grab elements on page and make an array of phrases from Danganronpa
+        let btn = document.querySelector("button");
+        let quote = document.getElementById("phrase");
+        let phrases = ["Mukuro Ikusaba, the sixteenth student lying hidden somewhere in this school... the one they call the Ultimate Despair, watch out for her.",
+        "I was always taught that if you had bad penmanship, a ghost would come and haunt you.",
+        "Allow me to cut through those words!",
+        "We all got both light and dark inside of us. What matters is the part we choose to act on, that's who we really are.",
+        "Q: *ask yourself a question*<br>A: Because it's a game!"];
+    
+        // Randomly generate a phrase from the array (change quote's innerHTML) when the button is clicked
+        function displayQuote ()
+        {
+            let gen = Math.floor(Math.random() * phrases.length);
+            quote.innerHTML = phrases[gen];
+        }
+        btn.onclick = displayQuote;
+    </script>
+</body>
+</html>

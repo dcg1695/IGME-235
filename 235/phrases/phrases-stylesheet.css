@@ -1,0 +1,69 @@
+@font-face {
+    font-family: danganronpa;
+    src: url(goodbyeDespair.ttf);
+    }
+body { 
+    background-color: #000;
+    font-family: danganronpa;
+    }
+.main {
+    background-image: url("images/despair.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "title" "button" "phrase" "footer";
+    grid-template-columns: 95vw;
+    grid-template-rows: 9.5vw 9.5vw 350px 50px;
+    }
+@media screen and (max-width: 800px){
+    .main {
+        display: grid;
+        grid-template-areas: "title" "button" "phrase" "footer";
+        grid-template-columns: 95vw;
+        grid-template-rows: 9.5vw 9.5vw 350px 50px;
+    }
+}
+header {
+    grid-area: title;
+    color: #fff;
+    font-size: 35pt;
+    text-align: center;
+    transform: translateY(-20%);
+    text-shadow: 2px 2px #ff0000, 2px -2px #ff0000, -2px 2px #ff0000, -2px -2px #ff0000, 4px 4px #000;
+    }
+#button {
+    grid-area: button;
+    }
+.press {
+    font-family: danganronpa;
+    font-size: 12pt;
+    position: absolute;
+    left: 40vw;
+    width: 280px;
+    box-shadow: 2px 2px #000;
+    }
+.press:hover {
+    background-color: #cc0000;
+    }
+.press:active {
+    background-color: #ff0000;
+    }
+#phrase {
+    grid-area: phrase;
+    font-size: 25pt;
+    text-align: center;
+    text-shadow: 2px 2px #fff, 2px -2px #fff, -2px 2px #fff, -2px -2px #fff;
+    position: relative;
+    top: 30vh;
+    margin-left: 25px;
+    }
+footer {
+    grid-area: footer;
+    color: #fff;
+    margin-left: 5px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    }
