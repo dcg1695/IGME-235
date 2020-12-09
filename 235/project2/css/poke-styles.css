@@ -1,0 +1,425 @@
+/* CSS RULES FOR POKEMON FINDER */
+
+/*If the screen is smaller than 1100px, adjust sizing of elements so the page still looks nice*/
+@media only screen and (max-width: 1100px){
+    #stats {
+        font-size: 1.45vw;
+    }
+
+    #basicInfo {
+        font-size: 1.45vw;
+    }
+
+    #moves {
+        font-size: 1.35vw;
+        height: 518px;
+    }
+
+    #pokemonTitle {
+        font-family: 'Pokemon Fire Red', serif;
+        color: #000;
+        font-weight: bold;
+        font-size: 1.75rem;
+        margin-top: 7%;
+        margin-bottom: 0;
+    }
+
+    #pokeImg {
+        width: 30%;
+        height: auto;
+    }
+
+    .arrow {
+        font-size: 4vw;
+    }
+
+    #pokeLeft {
+        padding-top: 13px;
+    }
+    #pokeRight {
+        padding-top: 13px;
+    }
+
+    #rangeResults ol {
+        font-size: 1.35vw;
+    }
+    #rangeTitleTxt {
+        font-size: 1.75vw;
+    }
+
+    .checkmark {
+        height: 18px;
+        width: 18px;
+    }
+    .radioButton .checkmark:after {
+        top: 6.5px;
+        left: 6.5px;
+        width: 6px;
+        height: 6px;
+    }
+
+    #searchInfo {
+        width: 80%;
+    }
+    #searchParam {
+        margin-top: 2%;
+    }
+    #searchTxt {
+        font-size: 1.5rem;
+    }
+}
+
+
+body {
+    background-color: #000;
+    color: #eee;
+}
+header {
+    font-family: 'Pokemon Fire Red', serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+    color: red;
+}
+
+#status {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    text-align: center;
+    float: right;
+    font-family: 'Pokemon Fire Red', serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #eee;
+    margin-right: 5%;
+}
+#status img {
+    height: 50px;
+    width: 50px;
+}
+
+#hp strong {
+    color: #d4bb00;
+    text-shadow: 0px 1px #000, 1px 0px #000, -1px 0px #000, 0px -1px #000;
+}
+#attack strong {
+    color: #e00031;
+    text-shadow: 0px 1px #000, 1px 0px #000, -1px 0px #000, 0px -1px #000;
+}
+#defense strong {
+    color: #3b55ff;
+    text-shadow: 0px 1px #000, 1px 0px #000, -1px 0px #000, 0px -1px #000;
+}
+#spAtk strong {
+    color: #00dbbe;
+    text-shadow: 0px 1px #000, 1px 0px #000, -1px 0px #000, 0px -1px #000;
+}
+#spDef strong {
+    color: #ff80ee;
+    text-shadow: 0px 1px #000, 1px 0px #000, -1px 0px #000, 0px -1px #000;
+}
+#speed strong {
+    color: #00cc22;
+    text-shadow: 0px 1px #000, 1px 0px #000, -1px 0px #000, 0px -1px #000;
+}
+#type1, #type2 {
+    text-shadow: 0px 1px #000, 1px 0px #000, -1px 0px #000, 0px -1px #000;
+}
+
+#pokemonResults {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "pokeName pokeName moves moves" "stats basicInfo moves moves" "stats basicInfo moves moves";
+    background-color: wheat;
+    border-radius: 20px;
+    transform: translateY(5%);
+    margin-bottom: 10px;
+}
+
+#pokeNameDiv {
+    grid-area: pokeName;
+    margin: 0px;
+    padding: 0px;
+}
+#pokemonTitle {
+    font-family: 'Pokemon Fire Red', serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 2.5vw;
+}
+#pokeImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1%;
+    width: 20%;
+    height: auto;
+}
+#shinyImg {
+    margin-left: -7rem;
+}
+#stats {
+    grid-area: stats;
+    width: 60%;
+    transform: translateX(37px);
+    padding: 0% 10%;
+    display: block;
+    margin: 0 auto;
+    background-color: #cc0300;
+    font-size: 1.75vw;
+    border-radius: 20px 0 0 20px;
+    border-right: 4px solid black;
+    height: 72%;
+    color: #eee;
+    font-family: 'Pokemon Fire Red', serif;
+}
+#stats p {
+    margin-bottom: -10px;
+    text-align: center;
+    transform: translateY(20px);
+}
+#stats h2 {
+    text-align: center;
+    transform: translateY(5px);
+    font-size: 1.9vw;
+    font-weight: bold;
+    text-decoration: underline solid #eee;
+}
+#basicInfo {
+    grid-area: basicInfo;
+    padding: 0 10%;
+    width: 60%;
+    transform: translateX(-37px);
+    display: block;
+    margin: 0 auto;
+    height: 72%;
+    border-radius: 0 20px 20px 0;
+    border-left: 4px solid black;
+    background-color: #eee;
+    font-size: 1.75vw;
+    color: #000;
+    font-family: 'Pokemon Fire Red', serif;
+}
+#basicInfo p {
+    margin: 16px 4px;
+    transform: translateY(15px) translateX(20px);
+}
+#basicInfo h2 {
+    text-align: center;
+    transform: translateY(5px);
+    font-size: 1.9vw;
+    font-weight: bold;
+    text-decoration: underline solid #000;
+}
+#basicInfo li {
+    margin-top: 3px;
+}
+#moves {
+    grid-area: moves;
+    padding: 0 5% 5% 5%;
+    margin: 10%;
+    width: 70%;
+    height: 605px;
+    font-size: 1.5vw;
+    border-radius: 20px 5px 5px 20px;
+    background-color: #ffe354;
+    color: #000;
+    font-family: 'Pokemon Fire Red', serif;
+    overflow: auto;
+}
+#moves h2 {
+    text-align: center;
+    transform: translateY(5px);
+    font-size: 2.25vw;
+    font-weight: bold;
+    text-decoration: underline solid #000;
+}
+#moves ol {
+    margin: 0 auto;
+    width: 80%;
+    columns: 2;
+    column-gap: 25%;
+    list-style: circle;
+}
+
+/* This changes the Scroll Bar 
+w3Schools had examples of this*/
+
+/*width of the scroll bar*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+/*scroll bar handle*/
+::-webkit-scrollbar-thumb {
+    background: #e00031;
+    border-radius: 5px;
+}
+/*scroll bar track*/
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(150, 150, 150); 
+    border-radius: 5px;
+}
+
+/*the following rules are for creating custom radio buttons
+w3schools.com provided examples on how to do this*/
+.radioButton {
+    display: block;
+    position: relative;
+    font-family: 'Pokemon Fire Red', serif;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1.75vw;
+    margin-bottom: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.radioButton input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+.radioButton:hover input ~ .checkmark {
+    background-color: #f89990;
+}
+.radioButton input:checked ~ .checkmark {
+    background-color: #cf413f;
+}
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.radioButton input:checked ~ .checkmark:after {
+    display: block;
+    position: absolute;
+}
+.radioButton .checkmark:after {
+    top: 8.5px;
+    left: 8.5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #eee;
+}
+
+.widgets {
+    font-family: 'Pokemon Fire Red', serif;
+    font-size: 1.75vw;
+}
+
+#searchInfo {
+    padding-left: 10%; 
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#searchTxt {
+    font-family: 'Pokemon Fire Red', serif;
+    font-size: 1.75vw;
+}
+#searchOption {
+    transform: translateY(-5px);
+}
+#rangeDiv {
+    padding-left: 10%;
+}
+#limit {
+    font-family: 'Pokemon Fire Red', serif;
+    font-size: 1.25vw;
+}
+#randomDiv {
+    transform: translateX(-10%);
+}
+
+/*style the text box*/
+input[type=text] {
+    box-sizing: border-box;
+    width: 50%;
+    font-family: 'Pokemon Fire Red', serif;
+    font-size: 1.5vw;
+}
+
+.button {
+    background-color: #cf413f;
+    color: #eee;
+    padding: 14px 24px;
+    font-family: 'Pokemon Fire Red', serif;
+    font-size: 1.5vw;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#rangeResults {
+    display: block;
+    margin: 0 auto;
+    background-color: wheat;
+    border-radius: 20px;
+    width: 75%;
+    transform: translateY(15%);
+}
+#rangeResults ol {
+    padding-left: 15%;
+    padding-bottom: 2rem;
+    list-style: circle;
+    font-family: 'Pokemon Fire Red', serif;
+    font-weight: bold;
+    font-size: 1.6vw;
+    color: #000;
+}
+#rangeResults li:hover {
+    cursor: pointer;
+    color: #cc0300;
+}
+#rangeTitleTxt {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5vw;
+    padding-bottom: 0;
+    font-family: 'Pokemon Fire Red', serif;
+    color: #000;
+}
+#pokeTitle {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#rangeTitle {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#pokeLeft, #rangeLeft {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #e00031;
+    font-size: 4vw;
+    font-weight: bold;
+}
+#pokeRight, #rangeRight {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #eee;
+    font-size: 4vw;
+    font-weight: bold;
+}
+.arrow:hover {
+    cursor: pointer;
+}

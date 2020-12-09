@@ -1,0 +1,249 @@
+body {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto;
+}
+main {
+    background-color: #adffc4;
+}
+hr {
+    width: 0px;
+}
+
+/* SECTION 1: HEADER/NAV */
+header h1 {
+    text-align: center;
+}
+header {
+    position: relative;
+    top: 0;
+    background-color: black;
+    color: #DADADA;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+nav a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+nav a:link, nav a:visited {
+    color: #DADADA;
+}
+nav a:hover {
+    color: #5eff00;
+}
+nav .tab {
+    padding-right: 2rem;
+    margin-right: 2rem;
+}
+h1 .tab {
+    margin-left: 18rem;
+}
+/* SECTION 2: About Me */
+h2 {
+    font-family: 'VT323', monospace;
+    font-size: 30pt;
+    text-align: center;
+}
+.aboutMe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #66ff7d;
+}
+.aboutMe img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+#details {
+    border: 0px dotted black;
+    width: 30%;
+    height: 400px;
+    font-size: 15pt;
+    margin-right: 10rem;
+    margin-left: 5rem;
+    text-align: center;
+    overflow: auto;
+}
+/* SECTION 3: OTHER MATERIALS INFO w/ IMAGES */
+.work {
+    display: grid;
+    grid-template-areas: "image    desc";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto 100px;
+    justify-items: center;
+    transform: translateY(10%);
+    margin-left: 2rem;
+}
+h4 {
+    grid-area: desc;
+    font-size: 30pt;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    transform: translateY(-17.5%);
+}
+.t2 {
+    transform: translateY(-20%);
+}
+.t3 {
+    transform: translateY(-20%);
+}
+#work img {
+    grid-area: image;
+    padding-left: 1rem;
+    height: 100%;
+    width: 95%;
+}
+#workInfo {
+    grid-area: desc;
+    width: 75%;
+    height: 85%;
+    text-align: center;
+    font-size: 14pt;
+    transform: translateY(10%);
+    padding: 1rem;
+    overflow: auto;
+    border: 0px dotted black;
+}
+h4 a:link, h4 a:visited {
+    color: black;
+}
+h4 a:focus, h4 a:hover {
+    color: #7200f5;
+}
+/* SECTION 4: Contact Info */
+.contact {
+    display: grid;
+    grid-template-areas: "info    github    linkedin";
+    grid-template-columns: 200px 150px 150px;
+    grid-template-rows: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: #e3ffe8;
+    transform: translateY(10px);
+}
+#contactInfo {
+    grid-area: info;
+    width: 75%;
+}
+#contactInfo p {
+    font-size: 14pt;
+    line-height: 1.5em;
+}
+#contactInfo a {
+    color: black;
+}
+#git {
+    grid-area: github;
+}
+#git img, #linkedin img {
+    width: 70%;
+}
+#linkedin {
+    grid-area: linkedin;
+}
+
+@media only screen and (max-width: 800px){
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        display: none;
+    }
+    nav {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+    }
+    main {
+        grid-template-rows: 92vh 750px 750px 25vh;
+        padding: 0;
+        grid-gap: 1rem;
+    }
+    .aboutMe img {
+        position: relative;
+        top: 30px;
+        bottom: 5px;
+        grid-row-start: 1;
+        width: 50%;
+        margin-left: 0;
+    }
+    .aboutMe, .work {
+        grid-template-columns: 1fr;
+        grid-template-rows: 45vh auto auto;
+        width: 100%;
+    }
+    .work {
+        margin-top: 1rem;
+    }
+    .work a {
+        padding: .5rem;
+        display: flex;
+        justify-content: center;
+    }
+    .aboutMe h2 {
+        display: flex;
+        justify-self: center;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: .5rem;
+    }
+    .aboutMe p {
+        font-size: 1rem;
+    }
+    .work > * {
+        font-size: 1rem;
+    }
+    .work img {
+        grid-row-start: 1;
+        height: 45vh;
+        width: 80vw;
+        padding: 0;
+    }
+    h2#workInfo {
+        margin: 0;
+    }
+    p#workInfo {
+        padding: .5rem;
+        height: 100%;
+        margin: 0;
+        font-size: .8em;
+    }
+    .contact {
+        width: 90vw;
+        padding: .5rem;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+        justify-self: center;
+        line-height: 1.3rem;
+        grid-column-gap: 1rem;
+        border-top: 2px solid black;
+    }
+    #git, #linkedin {
+        padding-left: 1rem;
+        align-content: center;
+    }
+    a img {
+        width: 80%;
+        height: 80%;
+    }
+}

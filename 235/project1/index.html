@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>David Green Portfolio</title>
+       <link href="css/portfolio-style.css" rel="stylesheet">
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=VT323&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- SECTION 1: HEADER/NAV -->
+        <main>
+            <header>
+                <h1>
+                    <span class="tab">David Green</span>
+                </h1>
+                <nav>
+                    <span class="tab"><a href="index.html">Home</a></span>
+                    <span class="tab"><a href="resume.pdf">Resume</a></span>
+                    <span class="tab"><a href="#projects">Gallery</a></span>
+                    <span class="tab"><a href="#contacts">Contact</a></span>
+                </nav>
+            </header>
+
+            <!-- SECTION 2: About Me -->
+            <div class="aboutMe">
+                <img src="media/david.jpg" alt="Picture of myself">
+                <section id="details">
+                    <h2>Game Design student looking for a summer Co-op</h2>
+                    <p>
+                        I'm a second-year Game Design and Development student at RIT. It’s really great when I can become part of a team and blend our ideas together to
+                        create an amazing story, game, and experience that can appeal to many people. My primary skills are coding and web design, in which they're shown
+                        through my skills in C#, Unity, HTML, CSS, and Javascript. I can also do 3D modeling in Maya and a little bit of pixel art.
+                    </p>
+                </section>
+            </div>
+
+            <hr>
+
+            <!-- SECTION 3: Other content -->
+            <div id="projects" class="work">
+                <img src="media/pitch-party.png" alt="Pitch Party title screen">
+                <h4 class="t1"><a href="https://people.rit.edu/dcg1695/235/project3/">Pitch Party</a></h4>
+                <p id="workInfo">
+                    This is a desktop browser-based survival shooter made using Javascript, PixiJS, and HTML/CSS where the player must ward off an incoming group of
+                    enemies using the power of harmony bullets. You gain new types of bullets every level and must use certain ones to take out certain enemies. When
+                    making this game, it helped me get a better understanding of what you can do with PixiJS and understanding switches for what to display and when. One
+                    of the biggest challenges here was moving the character smoothly with keyboard control. It was a good idea to implement but was also a struggle to
+                    get working properly.
+                </p>
+            </div>
+            <br>
+            <div class="work">
+                <img src="media/poke-finder.png" alt="Data loaded on Pikachu in Pokémon Finder">
+                <h4 class="t2"><a href="https://people.rit.edu/dcg1695/235/project2/">Pokémon Finder</a></h4>
+                <p id="workInfo">
+                    This is a simple Pokémon finder/Pokedex app that I made using Javascript, HTML/CSS, and the Pokémon API. It takes user input from any type of search
+                    and displays the information on a Pokémon of their choosing, from their stats to their abilities to their movesets. Working on this app helped me
+                    understand how results are grabbed from an API after being requested and shown to the user. A special feature of this app is that there is a small
+                    chance for the app to a Pokémon in its shiny form whenever the user searches for one, similar to the shiny odds in the games. A pretty major challenge
+                    was getting information from the API to load, but I worked through it by carefully following paths to the information and adding informative placeholder
+                    text for the user when a request returned nothing.
+                </p>
+            </div>
+            <br>
+            <div class="work">
+                <img src="media/phrases.png" alt="Page for grabbing random phrases from Danganronpa series">
+                <h4 class="t3"><a href="https://people.rit.edu/dcg1695/235/phrases/random-phrases.html">Random Danganronpa Phrases</a></h4>
+                <p id="workInfo">
+                    This is a random phrase generator that I made using Javascript, HTML, and CSS. This generator gives a cool greeting when it's first loaded up, and then
+                    it allows the user to press the button at the top of the page and get any popular or famous phrase from the Danganronpa series. The phrases used in this
+                    generator I chose because I thought that they were either funny or thought-provoking quotes. It also has a cool background image of the three main
+                    protagonists from the series, yet to make the image the background of the page took some trial-and-error and a little help. It was a lot of fun to
+                    make this small project since it helped me learn about event listeners in scripts and how to make them go off to do something else, as well as give
+                    me an opportunity to make something about one of my favorite anime/game series.
+                </p>
+            </div>
+
+            <hr>
+
+            <!-- SECTION 4: Contact Info -->
+            <div class="contact" id="contacts">
+                <section id="contactInfo">
+                    <p>David Green<br>
+                    (914)-564-0826<br>
+                    <a href="mailto:dcg1695@rit.edu">dcg1695@rit.edu</a><br>
+                    <a href="resume.pdf">Resume</a></p>
+                </section>
+                <section id="git">
+                    <a href="https://github.com/dcg1695/IGME-235"><img src="media/git.svg" alt="Github Logo with link"></a>
+                </section>
+                <section id="linkedin">
+                    <a href="https://www.linkedin.com/in/david-green-04332a1b5/"><img src="media/linkedin.png" alt="LinkedIn Logo with link"></a>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

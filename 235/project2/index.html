@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>Pokémon Finder</title>
+	<link rel="stylesheet" href="css/poke-styles.css" />
+	<script src="js/poke-script.js"></script>
+	<link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Pokémon Finder!</h1>
+    </header>
+
+    <div id="searchInfo">
+        <div class="widgets" id="searchOption">
+            <p id="searchTxt">Select a type of search:</p>
+
+            <label class="radioButton">Pokémon
+                <input type="radio" checked="checked" name="radio" class="searchType" value="pokemon">
+                <span class="checkmark"></span>
+            </label>
+            <label class="radioButton">Range
+                <input type="radio" name="radio" class="searchType" value="range">
+                <span class="checkmark"></span>
+            </label>
+            <label class="radioButton">Random
+                <input type="radio" name="radio" class="searchType" value="random">
+                <span class="checkmark"></span>
+            </label>
+            <label class="radioButton">Documentation
+                <input type="radio" name="radio" class="searchType" value="docs">
+                <span class="checkmark"></span>
+            </label>
+		</div>
+		
+		<br>
+        <div id="searchParam">
+            <div class="widgets" id="specificDiv">
+                Enter a Pokémon Name or Pokedex Number:
+                <br>
+                <input id="specificTerm" type="text" size="20" maxlength="20" placeholder="Pikachu or 25" />
+                <br>
+                <br>
+                <button type="button" id="specificSearch" class="button">Search Pokémon</button>
+            </div>
+            
+            <div class="widgets" id="rangeDiv">
+                Enter a Pokedex Number to start at:
+                <input id="rangeTerm" type="text" size="20" maxlength="3" placeholder="25 (Pikachu)" />
+                <br>
+                <div class="widgets">
+                   # of results:
+                    <select id="limit">
+						<option value="9">9</option>
+						<option value="12">12</option>
+						<option value="15" selected>15</option>
+						<option value="18">18</option>
+                        <option value="21">21</option>
+                    </select>
+                </div>
+                <br>
+                <button type="button" id="rangeSearch" class="button">Search Range</button>
+            </div>
+
+            <div class="widgets" id="randomDiv">
+                <button type="button" id="randomSearch" class="button">Get a Random Pokémon</button>
+            </div>
+
+            <div class="widgets" id="docsDiv">
+                <button type="button" onclick="location.href='documentation.html'" id="docsSearch" class="button">Documentation</button>
+            </div>
+		</div>
+		
+        <br>
+    </div>
+    <br>
+    <div id="status">Ready to Search!</div>
+    <br>
+    <br>
+    
+
+    <div id="rangeResults">
+        <div id="rangeTitle">
+            <h1 class="arrow" id="rangeLeft">&#8678;</h1>
+            <h1 id="rangeTitleTxt">Choose a Pokémon for More Info!</h1>
+            <h1 class="arrow" id="rangeRight">&#8680;</h1>
+        </div>
+        <ol id="rangeResultsList"></ol>
+    </div>
+
+
+    <div id="pokemonResults">
+
+        <div id="pokeNameDiv">
+            <div id="pokeTitle">
+                <h1 class="arrow" id="pokeLeft">&#8678;</h1>
+                <h1 id="pokemonTitle">pkmnTemp</h1><img alt="Shiny Pokemon Star" src="images/shiny-stad2-star.png" id="shinyImg">
+                <h1 class="arrow" id="pokeRight">&#8680;</h1>
+            </div>
+            <img alt="Pokemon Image" src="images/poke-glitch.png" id="pokeImg"> <!--Image here is a placeholder for images that aren't found-->
+        </div>
+
+        <div id="basicInfo">
+            <h2>Basic Info</h2>
+            <p id="pokeName"></p>
+            <p id="pokeNum"></p>
+            <p id="pokeType"></p>
+            <p id="pokeHeight"></p>
+            <p id="pokeWeight"></p>
+            <p><strong>Abilities:</strong></p>
+            <ol id="pokeAbilities"></ol>
+        </div>
+
+        <div id="stats">
+            <h2>Stats</h2>
+            <p id="hp"></p>
+            <p id="attack"></p>
+            <p id="defense"></p>
+            <p id="spAtk"></p>
+            <p id="spDef"></p>
+            <p id="speed"></p>
+        </div>
+
+        <div id="moves">
+            <h2>Moves</h2>
+            <ol id="movesList"></ol>
+        </div>
+
+    </div>
+</body>
+</html>
